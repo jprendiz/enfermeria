@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #041562;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 250px;
+}
+
+.signos-vitales {
+    display: flex;
+    justify-content: space-around;
+}
+
+#lb-presion-arterial:hover, #lb-imc:hover, #lb-glucosa:hover, #lb-oxigenacion:hover,  #subtitulo-3{
+    color: #DA1212;
+    background-color:EEEEEE ;
+    border-radius: 10px;
+}
+
+#lb-presion-arterial 
+
+.glucometro{
+    margin-bottom: 9px;
+}
+
+.inputsConsultas {
+    display: none;
+}
+
+.subtitulo-3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tensiometro, .imc, .glucometro, .oxigenacion {
+    width: 180px;
+}
+
+#calculo-presion-arterial, #calculo-imc, #calculo-glucosa, #calculo-oxigenacion {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#parrafo-boton-continuar, #parrafo-boton-reiniciar{
+    text-align: center;
+}
+
+#parrafo-boton-calcular-imc, #parrafo-boton-reiniciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones{
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #11468F;
+    color: #EEEEEE;
+    background: #11468F;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.botones:hover {
+    background-color: #041562;
+    color: #EEEEEE;
+}
+
+.espacio-resultados{
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 125px;
+    border: 1px solid #11468F;
+    justify-content: center;
+    color: #E8630A;
+    font-size: 28px;
+    text-align: center;
+}
+
+.input-numero {
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    border: 5px inset #E8630A;
+    font-size: 28px;
+}

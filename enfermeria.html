@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+		<meta charset = "utf-8" />
+		<title> Consulta IMC - Enfermeria UNP </title>
+		<link rel="stylesheet" href="./enfermeria.css">
+		
+	</head>
+
+    <body>
+        <section id="titulo">
+            <h1>Consulta - Enfermería UNP Rivas</h1>
+            <img class = "logo" src="./imgs/logounp.png" alt="logounp" id="logo"> 
+        </section>
+
+        <section id="seleccionar-consultas">
+
+            <div class = "signos-vitales">   
+
+                <input type="radio" class="inputsConsultas" name="consultas" id="op-presion-arterial">
+                <label id="lb-presion-arterial" for="op-presion-arterial"> 
+                    <img class = "tensiometro" src="./imgs/tensiometro.jpg" alt="Tensiometro"> 
+                    <p id="txt-presion" class="subtitulo-3">Presión Arterial</p>
+                </label>
+
+                <input type="radio" class="inputsConsultas" name="consultas" id="op-imc">
+                <label id="lb-imc" for="op-imc">
+                    <img class = "imc" src="./imgs/imc.jpg" alt="imc"> 
+                    <p id="txt-imc" class="subtitulo-3">I M C</p>
+                </label>
+
+                <input type="radio" class="inputsConsultas" name="consultas" id="op-glucosa">
+                <label id="lb-glucosa" for="op-glucosa"> 
+                    <img class = "glucometro" src="./imgs/glucometro.jpg" alt="Glucómetro"> 
+                    <p id="txt-glucosa" class="subtitulo-3">Glucosa</p>
+                </label>
+
+                <input type="radio" class="inputsConsultas" name="consultas" id="op-oxigenacion">
+                <label id="lb-oxigenacion" for="op-oxigenacion">
+                    <img class = "oxigenacion" src="./imgs/oximetro.jpg" alt="Oxímetro"> 
+                    <p id="txt-oxigenacion" class="subtitulo-3">Oxigenación</p>
+                </label>
+            </div>
+
+            <div>
+               <p id="parrafo-boton-continuar"> 
+                    <button class="botones" id="boton-continuar">Continuar</button>
+                </p>
+            </div>
+
+        </section>
+
+        <section id = "calculo-presion-arterial">
+            <section>
+                <img src="./imgs/presion.jpg" alt="Presion-arterial"> 
+            </section>
+            <section id="presion-2">
+                <h2> Descubre cómo está tu presión arterial </h2>
+            
+                <div class="datos-presion">
+                    <p id="input-edad"> ¿Cuál es tu edad? 
+                        <input class="input-numero" type="number" name="Medida" id="input-edad-numero">
+                    </p>
+                    <p id="input-sexo">
+                        <input type="radio" name="sexo" id="op-hombre"> Hombre
+                        <input type="radio" name="sexo" id="op-mujer"> Mujer
+                    </p>
+                    <p id="input-altura"> ¿Cuál es presión sistólica? 
+                        <input class="input-numero" type="number" name="SISTÓLICA" id="input-sistolica-numero">
+                    </p>
+                    <p id="input-altura"> ¿Cuál es tu presión diastólica? 
+                        <input class="input-numero" type="number" name="DIASTÓLICA" id="input-diastolica-numero">
+                    </p>
+                </div>
+                <div>
+                    <p id="parrafo-boton-calcular-presion">
+                        <button class="botones" id="boton-Calcular-Presion">Calcular</button>
+                        <button class="botones" id="boton-Borrar-Presion"> Borrar </button>
+                    </p>
+                </div>
+
+                <div class ="espacio-resultados">
+                    <label id="resultados-presion"> PRESION ARTERIAL </label>
+                </div>
+            </section>
+		</section>
+
+        <section id = "calculo-imc">
+            <section>
+                <img src="./imgs/imc2.png" alt="Gordo-flaco"> 
+            </section>
+            <section id="imc-2">
+                <h2> Descubre tu índice de masa corporal </h2>
+            
+                <div class="datos-imc">
+                    <p id="input-peso"> ¿Cuál es tu peso ? 
+                        <input class="input-numero" type="number" name="Medida" id="input-peso-numero">
+                        <input type="radio" name="Medida" id="op-kg"> (kg)
+                    <input type="radio" name="Medida" id="op-lb"> (lb)
+                    </p>
+                    
+                    <p id="input-altura"> ¿Cuál es tu altura? 
+                        <input class="input-numero" type="number" name="Altura" id="input-altura-numero">
+                        <input type="radio" name="Altura" id="op-cm"> centímetros (cm)
+                        <input type="radio" name="Altura" id="op-m"> metros (m)
+                        <input type="radio" name="Altura" id="op-plg"> pulgadas (plg)
+                    </p>
+                </div>
+                <div>
+                    <p id="parrafo-boton-calcular-imc">
+                        <button class="botones" id="boton-Calcular-Imc"> Calcular IMC </button>
+                        <button class="botones" id="boton-Borrar-Imc"> Borrar </button>
+                    </p>
+                </div>
+
+                <div class ="espacio-resultados">
+                    <label id="resultados-imc"> Indice de Masa Corporal </label>
+                </div>
+            </section>
+		</section>
+
+
+		<section id = "calculo-glucosa">
+            <section>
+            </section>
+            <section id="glucosa">
+                <h2> Descubre cómo están tus niveles de azúcar en la sangre</h2>
+            
+                <div class="datos-glucosa">
+                    <p id="input-glucosa"> ¿Cuál es tu nivel de azúcar en sangre ? 
+                        <input class="input-numero" type="number" id="input-glucosa-numero">
+                    </p>
+                </div>
+                <div>
+                    <p id="parrafo-boton-calcular-glucosa">
+                        <button class="botones" id="boton-Calcular-glucosa"> Calcular</button>
+                        <button class="botones" id="boton-Borrar-glucosa"> Borrar </button>
+                    </p>
+                </div>
+
+                <div class ="espacio-resultados">
+                    <label id="resultados-glucosa"> Estado del azúcar en sangre </label>
+                </div>
+            </section>
+		</section>
+
+        <section id = "calculo-oxigenacion">
+            <section>
+            </section>
+            <section id="oxigenacion">
+                <h2> Descubre cómo está tu nivel de oxigenación en la sangre</h2>
+            
+                <div class="datos-oxigenacion">
+                    <p id="input-oxigenacion"> ¿Cuál es tu nivel de oxigenación en sangre ? 
+                        <input class="input-numero" type="number" id="input-oxigenacion-numero"> %
+                    </p>
+                </div>
+                <div>
+                    <p id="parrafo-boton-calcular-oxigenacion">
+                        <button class="botones" id="boton-Calcular-oxigenacion"> Calcular</button>
+                        <button class="botones" id="boton-Borrar-oxigenacion"> Borrar </button>
+                    </p>
+                </div>
+
+                <div class ="espacio-resultados">
+                    <label id="resultados-oxigenacion"> ESTADO DE OXIGENACION EN SANGRE </label>
+                </div>
+            </section>
+		</section>
+
+        <p id="parrafo-boton-reiniciar"> 
+            <button class = "botones" id="boton-reiniciar">Reiniciar</button>
+        </p>
+
+        <script src="./js/enfermeria.js"> </script>
+    </body>
+
+</html>
