@@ -1,14 +1,10 @@
 window.addEventListener('load', iniciar)
 
-const opPresion = document.getElementById('op-presion-arterial')
-const opIMC = document.getElementById('op-imc')
-const opGlucosa = document.getElementById('op-glucosa')
-const opOxigeno = document.getElementById('op-oxigenacion')
-
-const txtPresion = document.getElementById('txt-presion')
-const txtIMC = document.getElementById('txt-imc')
-const txtGlucosa = document.getElementById('txt-glucosa')
-const txtOxigenacion = document.getElementById('txt-oxigenacion')
+let botonReiniciar = []
+const lbPresionArterial = document.querySelector('#lb-presion-arterial')
+const lbIMC = document.querySelector('#lb-imc')
+const lbGlucosa = document.querySelector('#lb-glucosa')
+const lbOxigenacion = document.querySelector('#lb-oxigenacion')
 
 const seccionCalcularImc = document.getElementById('calculo-imc')
 const seccionCalcularGlucosa = document.getElementById('calculo-glucosa')
@@ -16,7 +12,10 @@ const seccionCalcularPresion = document.getElementById('calculo-presion-arterial
 const seccionCalcularOxigenacion = document.getElementById('calculo-oxigenacion')
 
 const seccionPrincipal = document.getElementById('seleccionar-consultas')
-const botonReiniciar = document.getElementById('boton-reiniciar')
+botonReiniciar = document.querySelectorAll('.Reinicio')
+
+console.log(botonReiniciar)
+
 const resultadosPresion = document.getElementById('resultados-presion')
 const resultadosImc = document.getElementById('resultados-imc')
 const resultadosGlucosa = document.getElementById('resultados-glucosa')
@@ -56,92 +55,62 @@ botonBorrarOxigenacion.addEventListener('click', borrarDatosOxigenacion)
 const botonCalcularOxigenacion = document.getElementById('boton-Calcular-oxigenacion')
 botonCalcularOxigenacion.addEventListener('click', calcularOxigenacion)
 
-let imc
+lbPresionArterial.addEventListener('click', visualizarSeccionPresion)
+lbIMC.addEventListener('click', visualizarSeccionIMC)
+lbGlucosa.addEventListener('click', visualizarSeccionGlucosa)
+lbOxigenacion.addEventListener('click', visualizarSeccionOxigenacion)
+
 
 function iniciar() {
 
-    txtPresion.addEventListener('click', cambiarColorTexto1)
-    txtIMC.addEventListener('click', cambiarColorTexto2)
-    txtGlucosa.addEventListener('click', cambiarColorTexto3)
-    txtOxigenacion.addEventListener('click', cambiarColorTexto4)
-
-    const botonContinuar = document.getElementById('boton-continuar')
-    botonContinuar.addEventListener('click', VisualizarSeccion)
-
+    seccionCalcularImc.style.display = 'none'
+    seccionCalcularGlucosa.style.display = 'none'
+    seccionCalcularPresion.style.display = 'none'
+    seccionCalcularOxigenacion.style.display = 'none'
+    
     const botonCalcularImc = document.getElementById('boton-Calcular-Imc')
     botonCalcularImc.addEventListener('click', calcularIMC)
 
     const botonCalcularGlugosa = document.getElementById('boton-Calcular-glucosa')
     botonCalcularGlugosa.addEventListener('click', calcularGlucosa)
 
-    seccionCalcularImc.style.display = 'none'
-    seccionCalcularGlucosa.style.display = 'none'
-    seccionCalcularPresion.style.display = 'none'
-    seccionCalcularOxigenacion.style.display = 'none'
-    botonReiniciar.style.display = 'none'
-
-    botonReiniciar.addEventListener('click', reiniciarApp)
-}
-
-function cambiarColorTexto1() {
-    txtPresion.style.color = '#DA1212'
-    txtIMC.style.color = '#041562'
-    txtGlucosa.style.color = '#041562'
-    txtOxigenacion.style.color = '#041562'
-}
-
-function cambiarColorTexto2() {
-    txtPresion.style.color = '#041562'
-    txtIMC.style.color = '#DA1212'
-    txtGlucosa.style.color = '#041562'
-    txtOxigenacion.style.color = '#041562'
-}
-function cambiarColorTexto3()
-{
-    txtPresion.style.color = '#041562'
-    txtIMC.style.color = '#041562'
-    txtGlucosa.style.color = '#DA1212'
-    txtOxigenacion.style.color = '#041562'
-}
-
-function cambiarColorTexto4()
-{
-    txtPresion.style.color = '#041562'
-    txtIMC.style.color = '#041562'
-    txtGlucosa.style.color = '#041562'
-    txtOxigenacion.style.color = '#DA1212'
-}
-
-function VisualizarSeccion() {
-
-    if (opPresion.checked) {
-        seccionPrincipal.style.display = 'none'
-        seccionCalcularPresion.style.display = 'flex'
-        
-        opHombre.checked = true
-
-    } else if (opIMC.checked) {
-        
-        seccionPrincipal.style.display = 'none'
-        seccionCalcularImc.style.display = 'flex'
-
-        opCm.checked = true
-        opKg.checked = true
-
-    } else  if (opGlucosa.checked) {
-        seccionPrincipal.style.display = 'none'
-        seccionCalcularGlucosa.style.display = 'flex'
-
-    } else  if (opOxigeno.checked) {
-        seccionPrincipal.style.display = 'none'
-        seccionCalcularOxigenacion.style.display = 'flex'
-
-    } else {
-        alert('Debe seleccionar una opción')
-    }
-
     botonBorrar.addEventListener('click', borrar)
+    botonReiniciar[0].addEventListener('click', reiniciarApp)
+    botonReiniciar[1].addEventListener('click', reiniciarApp)
+    botonReiniciar[2].addEventListener('click', reiniciarApp)
+    botonReiniciar[3].addEventListener('click', reiniciarApp)
+
 }
+
+//Visualiza sección de la presión arterial
+function visualizarSeccionPresion() {
+    seccionPrincipal.style.display = 'none'
+    seccionCalcularPresion.style.display = 'flex'
+    //botonReiniciar.addEventListener('click', reiniciarApp)
+}
+
+
+//Visualiza sección del indice de masa corporal
+function visualizarSeccionIMC() {
+    seccionPrincipal.style.display = 'none'
+    seccionCalcularImc.style.display = 'flex'
+    //botonReiniciar.addEventListener('click', reiniciarApp)
+}
+
+
+//Visualiza sección de la glucosa
+function visualizarSeccionGlucosa() {
+    seccionPrincipal.style.display = 'none'
+    seccionCalcularGlucosa.style.display = 'flex'
+    //botonReiniciar.addEventListener('click', reiniciarApp)
+}
+
+//Visualiza sección de la oxigenación
+function visualizarSeccionOxigenacion() {
+    seccionPrincipal.style.display = 'none'
+    seccionCalcularOxigenacion.style.display = 'flex'
+}
+
 
 function calcularOxigenacion() {
 
@@ -160,7 +129,7 @@ function calcularOxigenacion() {
         resultadosOxigenacion.innerHTML = 'Este nivel de oxígeno es normal. Camine por dos minutos y mida su nivel de oxígeno nuevamente.'
     } 
 
-    botonReiniciar.style.display = 'flex'
+   // botonReiniciar.style.display = 'flex'
 }  
 
 function calcularPresionArterial() {
@@ -169,7 +138,6 @@ function calcularPresionArterial() {
     let pSistolica = inputSistolica.value
     let pDiastolica = inputDiastolica.value
     let sist = 0, diast = 0
-
 
     //valida si los valores son válidos
 
@@ -236,7 +204,7 @@ function calcularPresionArterial() {
             } 
         }   
         // Si es mujer
-    } else {
+    } else if (opMujer.checked) {
         if ( (edad >= 16) && (edad <= 24) ) {
             if ( (pSistolica >= 100) && (pSistolica <= 130) ) {
                 sist = 1
@@ -280,6 +248,9 @@ function calcularPresionArterial() {
                 diast = 1
             } 
         }  
+    } else {
+        alert('Debe seleccionar el sexo del paciente')
+        return
     }
 
     if ( (sist === 1) && (diast === 1) ) {
@@ -300,7 +271,7 @@ function calcularPresionArterial() {
     
 
     botonCalcularPresion.disabled = true
-    botonReiniciar.style.display = 'flex'
+    //botonReiniciar.style.display = 'flex'
 }
 
 function calcularIMC() {
@@ -374,7 +345,7 @@ function calcularGlucosa() {
         resultadosGlucosa.innerHTML = 'Muy alto: Busca atención médica de inmediato'
     }
 
-    botonReiniciar.style.display = 'flex'
+    //botonReiniciar.style.display = 'flex'
 }
 
 function imprimirResultados() {
@@ -399,7 +370,7 @@ function imprimirResultados() {
             resultadosImc.innerHTML += 'RESULTADO FUERA DE RANGO'
         } 
 
-        botonReiniciar.style.display = 'flex'
+        // botonReiniciar.style.display = 'flex'
 }
 
 function borrar() {
@@ -426,8 +397,10 @@ function borrarDatosOxigenacion() {
     inputOxigenacion.value = ""
     resultadosOxigenacion.innerHTML = ""
 }
+
 function reiniciarApp()
 {
     location.reload()
+    console.log('clic a reinicar')
 }
     

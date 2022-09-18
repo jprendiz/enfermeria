@@ -10,7 +10,8 @@
     <body>
         <section id="titulo">
             <h1>Consulta - Enfermería UNP Rivas</h1>
-            <img class = "logo" src="./imgs/logounp.png" alt="logounp" id="logo"> 
+            <img class = "logo" src="https://i.imgur.com/TIsbwpU.png" alt="logounp" id="logo"> 
+            <p class="autor">Elaborado por José A. Préndiz - jprendiz@gmail.com</p>
         </section>
 
         <section id="seleccionar-consultas">
@@ -19,64 +20,60 @@
 
                 <input type="radio" class="inputsConsultas" name="consultas" id="op-presion-arterial">
                 <label id="lb-presion-arterial" for="op-presion-arterial"> 
-                    <img class = "tensiometro" src="./imgs/tensiometro.jpg" alt="Tensiometro"> 
+                    <img class = "tensiometro" src="https://i.imgur.com/G5GieQL.jpg" alt="Tensiometro"> 
                     <p id="txt-presion" class="subtitulo-3">Presión Arterial</p>
                 </label>
 
                 <input type="radio" class="inputsConsultas" name="consultas" id="op-imc">
                 <label id="lb-imc" for="op-imc">
-                    <img class = "imc" src="./imgs/imc.jpg" alt="imc"> 
+                    <img class = "imc" src="https://i.imgur.com/IBYwkgQ.jpg" alt="imc"> 
                     <p id="txt-imc" class="subtitulo-3">I M C</p>
                 </label>
 
                 <input type="radio" class="inputsConsultas" name="consultas" id="op-glucosa">
                 <label id="lb-glucosa" for="op-glucosa"> 
-                    <img class = "glucometro" src="./imgs/glucometro.jpg" alt="Glucómetro"> 
+                    <img class = "glucometro" src="https://i.imgur.com/Rlj65bm.jpg" alt="Glucómetro"> 
                     <p id="txt-glucosa" class="subtitulo-3">Glucosa</p>
                 </label>
 
                 <input type="radio" class="inputsConsultas" name="consultas" id="op-oxigenacion">
                 <label id="lb-oxigenacion" for="op-oxigenacion">
-                    <img class = "oxigenacion" src="./imgs/oximetro.jpg" alt="Oxímetro"> 
+                    <img class = "oxigenacion" src="https://i.imgur.com/mcm1XEF.jpg" alt="Oxímetro"> 
                     <p id="txt-oxigenacion" class="subtitulo-3">Oxigenación</p>
                 </label>
             </div>
 
-            <div>
-               <p id="parrafo-boton-continuar"> 
-                    <button class="botones" id="boton-continuar">Continuar</button>
-                </p>
-            </div>
-
         </section>
 
+
         <section id = "calculo-presion-arterial">
-            <section>
-                <img src="./imgs/presion.jpg" alt="Presion-arterial"> 
-            </section>
-            <section id="presion-2">
-                <h2> Descubre cómo está tu presión arterial </h2>
             
+            <section>
+                <h2> Descubre cómo está tu presión arterial </h2>
+
                 <div class="datos-presion">
-                    <p id="input-edad"> ¿Cuál es tu edad? 
-                        <input class="input-numero" type="number" name="Medida" id="input-edad-numero">
-                    </p>
                     <p id="input-sexo">
                         <input type="radio" name="sexo" id="op-hombre"> Hombre
                         <input type="radio" name="sexo" id="op-mujer"> Mujer
                     </p>
-                    <p id="input-altura"> ¿Cuál es presión sistólica? 
+
+                    <div class="preguntas-presion">
+
+                        <p id="input-edad"> ¿Cuál es tu edad? </p>
+                        <input class="input-numero" type="number" name="Medida" id="input-edad-numero">
+                        
+                        <p id="input-altura"> ¿Cuál es presión sistólica? </p>
                         <input class="input-numero" type="number" name="SISTÓLICA" id="input-sistolica-numero">
-                    </p>
-                    <p id="input-altura"> ¿Cuál es tu presión diastólica? 
+                        
+                        <p id="input-altura"> ¿Cuál es tu presión diastólica? </p>
                         <input class="input-numero" type="number" name="DIASTÓLICA" id="input-diastolica-numero">
-                    </p>
+                        
+                    </div>
                 </div>
-                <div>
-                    <p id="parrafo-boton-calcular-presion">
-                        <button class="botones" id="boton-Calcular-Presion">Calcular</button>
-                        <button class="botones" id="boton-Borrar-Presion"> Borrar </button>
-                    </p>
+                <div id="parrafo-boton-calcular-presion">
+                    <button class="botones" id="boton-Calcular-Presion">Calcular</button>
+                    <button class="botones" id="boton-Borrar-Presion"> Borrar </button>
+                    <button class = "boton-reiniciar Reinicio">Reiniciar</button>
                 </div>
 
                 <div class ="espacio-resultados">
@@ -86,9 +83,7 @@
 		</section>
 
         <section id = "calculo-imc">
-            <section>
-                <img src="./imgs/imc2.png" alt="Gordo-flaco"> 
-            </section>
+
             <section id="imc-2">
                 <h2> Descubre tu índice de masa corporal </h2>
             
@@ -110,6 +105,7 @@
                     <p id="parrafo-boton-calcular-imc">
                         <button class="botones" id="boton-Calcular-Imc"> Calcular IMC </button>
                         <button class="botones" id="boton-Borrar-Imc"> Borrar </button>
+                        <button class = "boton-reiniciar Reinicio">Reiniciar</button>
                     </p>
                 </div>
 
@@ -118,7 +114,6 @@
                 </div>
             </section>
 		</section>
-
 
 		<section id = "calculo-glucosa">
             <section>
@@ -135,6 +130,7 @@
                     <p id="parrafo-boton-calcular-glucosa">
                         <button class="botones" id="boton-Calcular-glucosa"> Calcular</button>
                         <button class="botones" id="boton-Borrar-glucosa"> Borrar </button>
+                        <button class = "boton-reiniciar Reinicio">Reiniciar</button>
                     </p>
                 </div>
 
@@ -159,6 +155,7 @@
                     <p id="parrafo-boton-calcular-oxigenacion">
                         <button class="botones" id="boton-Calcular-oxigenacion"> Calcular</button>
                         <button class="botones" id="boton-Borrar-oxigenacion"> Borrar </button>
+                        <button class = "boton-reiniciar Reinicio">Reiniciar</button>
                     </p>
                 </div>
 
@@ -168,9 +165,9 @@
             </section>
 		</section>
 
-        <p id="parrafo-boton-reiniciar"> 
+        <!-- <p id="parrafo-boton-reiniciar"> 
             <button class = "botones" id="boton-reiniciar">Reiniciar</button>
-        </p>
+        </p> -->
 
         <script src="./js/enfermeria.js"> </script>
     </body>

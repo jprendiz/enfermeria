@@ -24,18 +24,63 @@ h2 {
     width: 250px;
 }
 
+#seleccionar-consultas {
+    width: 100%;
+    height: 68vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .signos-vitales {
     display: flex;
     justify-content: space-around;
+    gap: 24px;
 }
 
 #lb-presion-arterial:hover, #lb-imc:hover, #lb-glucosa:hover, #lb-oxigenacion:hover,  #subtitulo-3{
     color: #DA1212;
     background-color:EEEEEE ;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-#lb-presion-arterial 
+/* #lb-presion-arterial  */
+
+#presion-2 {
+    display: flex;
+    justify-content: center;
+}
+
+#presion-2 img {
+    width: 100px;
+}
+
+.datos-presion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    justify-content: center;    
+}
+
+.preguntas-presion {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    grid-column-gap: 50px;
+    grid-row-gap: 12px;
+    text-align: right;
+    margin-top: 12px;
+}
+
+#parrafo-boton-calcular-presion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+    margin-top: 32px;
+}
 
 .glucometro{
     margin-bottom: 9px;
@@ -55,6 +100,10 @@ h2 {
     width: 180px;
 }
 
+.tensiometro:hover, .imc:hover, .glucometro:hover, .oxigenacion:hover  {
+    cursor: pointer;
+}
+
 #calculo-presion-arterial, #calculo-imc, #calculo-glucosa, #calculo-oxigenacion {
     flex-direction: row;
     align-items: center;
@@ -65,13 +114,28 @@ h2 {
     text-align: center;
 }
 
+.datos-glucosa {
+    display: flex;
+    justify-content: center;
+}
+
+#parrafo-boton-calcular-glucosa {
+    display: flex;
+    justify-content: center;
+}
+
 #parrafo-boton-calcular-imc, #parrafo-boton-reiniciar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.botones{
+.datos-oxigenacion, #parrafo-boton-calcular-oxigenacion {
+    display: flex;
+    justify-content: center ;
+}
+
+.botones, .boton-reiniciar{
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -86,7 +150,7 @@ h2 {
     margin-right: 5px;
 }
 
-.botones:hover {
+.botones:hover, .boton-reiniciar:hover {
     background-color: #041562;
     color: #EEEEEE;
 }
@@ -109,4 +173,10 @@ h2 {
     text-align: center;
     border: 5px inset #E8630A;
     font-size: 28px;
+}
+
+.autor {
+    text-align: center;
+    font-size: x-small;
+    color: gray;
 }
