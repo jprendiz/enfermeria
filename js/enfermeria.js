@@ -330,14 +330,14 @@ function calcularGlucosa() {
 
     //calcula el estado según nivel de azúcar
 
-    if(glucosa < 90) {
+    if(glucosa < 80) {
         resultadosGlucosa.innerHTML = 'Nivel Bajo. Consulte a su médico'
         return
-    } else if ( (glucosa >= 90) && (glucosa <=120)) {
+    } else if ( (glucosa >= 80) && (glucosa <=100)) {
         resultadosGlucosa.innerHTML = 'Nivel normal'
-    } else if ( (glucosa > 120) && (glucosa <=160)) {
+    } else if ( (glucosa > 100) && (glucosa <=140)) {
         resultadosGlucosa.innerHTML = 'Nivel medio: Busca atención médica'
-    } else if ( (glucosa > 160) && (glucosa <=240)) {
+    } else if ( (glucosa > 140) && (glucosa <=240)) {
         resultadosGlucosa.innerHTML = 'Demasiado alto: Trabaja en bajar tus niveles de azúcar en la sangre'
     } else if ( (glucosa > 240) && (glucosa <=300)) {
         resultadosGlucosa.innerHTML = 'Demasiado alto: Esto podría ser una señal de manejo ineficiente de la glucosa, así que visita a un médico'
